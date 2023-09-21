@@ -1,0 +1,23 @@
+#ass1_problem2
+Create a dictionary of any 7 Indian states and their capitals. Write this into a JSON file.
+
+
+import json
+
+states_capital = {
+    "andhra pradesh": "amaravathi",
+    "goa": "panaji",
+    "assam": "dispur",
+    "arunachal pradesh": "itanagar",
+    "gujarat": "gandhinagar",
+    "telangana": "hyderabad",
+    "tamilnadu": "chennai"
+}
+
+with open("states_and_capitals.json", "w") as f:
+    json.dump(states_capital, f)
+
+with open("states_and_capitals.json", "r") as data_file:
+    data = json.load(data_file)
+
+print(data)
